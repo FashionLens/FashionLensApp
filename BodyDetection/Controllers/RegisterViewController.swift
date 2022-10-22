@@ -11,14 +11,30 @@ import Firebase
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var usernameInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var usernameInput: FloatingTextField!
+    @IBOutlet weak var passwordInput: FloatingTextField!
     @IBOutlet weak var enterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
 
         // Do any additional setup after loading the view.
+        self.hideKeyboardOnTapAround()
+
+        // Styling textfields
+        usernameInput.borderStyle = UITextField.BorderStyle.roundedRect
+        passwordInput.borderStyle = UITextField.BorderStyle.roundedRect
+    }
+    
+    @objc func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    func hideKeyboardOnTapAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     @IBAction func enterClick(_ sender: Any) {

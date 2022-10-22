@@ -19,7 +19,7 @@ public class FloatingTextField: UITextField {
     var placeholderAttributes = NSDictionary()
     var lblPlaceHolder = UILabel()
     var defaultFont = UIFont()
-    var difference: CGFloat = 30.0
+    var difference: CGFloat = 40.0
     var directionMaterial = placeholderDirection.placeholderUp
     var isUnderLineAvailabe : Bool = true
     override init(frame: CGRect) {
@@ -41,7 +41,7 @@ public class FloatingTextField: UITextField {
             underLine.frame = CGRect(x: 0, y: self.frame.size.height-1, width : self.frame.size.width, height : 1)
             
             underLine.clipsToBounds = true
-            self.addSubview(underLine)
+//            self.addSubview(underLine)
         }
         defaultFont = self.font!
         
