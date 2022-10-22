@@ -37,7 +37,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         
         // Asynchronously load the 3D character.
         var cancellable: AnyCancellable? = nil
-        cancellable = Entity.loadBodyTrackedAsync(named: "character/cyberpunk").sink(
+        cancellable = Entity.loadBodyTrackedAsync(named: "character/good_space_suit").sink(
             receiveCompletion: { completion in
                 if case let .failure(error) = completion {
                     print("Error: Unable to load model: \(error.localizedDescription)")
