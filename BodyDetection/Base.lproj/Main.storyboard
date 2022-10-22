@@ -62,6 +62,15 @@
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7B-tC-ib5">
+                                <rect key="frame" x="161" y="48" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Lif-hu-84E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnh-Ls-9aP"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -153,24 +162,51 @@
                                     <outlet property="delegate" destination="5Gr-J5-2sL" id="EHl-cb-3d5"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="x3n-df-Zit">
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="x3n-df-Zit">
                                 <rect key="frame" x="0.0" y="782" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="5Gr-J5-2sL" id="HkK-0E-qoX"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-Qu-9Tc">
+                                <rect key="frame" x="36" y="737" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-Ar-Ue8">
+                                <rect key="frame" x="126" y="737" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-Dy-oHk">
+                                <rect key="frame" x="215" y="737" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dty-RV-oMa">
+                                <rect key="frame" x="304" y="737" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eEc-5r-llM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fvp-Ar-Ue8" firstAttribute="leading" secondItem="z99-Qu-9Tc" secondAttribute="trailing" constant="15" id="2Jg-AT-xAr"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="top" secondItem="7Pb-sN-wSR" secondAttribute="top" id="Emy-OV-XCZ"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="Fp4-LQ-63E"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="N4b-iN-0Rz"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="fvp-Ar-Ue8" secondAttribute="bottom" constant="10" id="QlU-xD-2LM"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="z99-Qu-9Tc" secondAttribute="bottom" constant="10" id="UJT-tW-DCB"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="XjK-gd-4rW"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="kgQ-8d-EEq" secondAttribute="bottom" id="ejL-2n-KNm"/>
+                            <constraint firstItem="wPN-Dy-oHk" firstAttribute="leading" secondItem="fvp-Ar-Ue8" secondAttribute="trailing" constant="20" id="gSy-ZM-MQh"/>
+                            <constraint firstItem="Dty-RV-oMa" firstAttribute="leading" secondItem="wPN-Dy-oHk" secondAttribute="trailing" constant="20" id="nf2-4F-Qzf"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="wPN-Dy-oHk" secondAttribute="bottom" constant="10" id="oMA-hZ-JRj"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="wbE-51-kRm"/>
                             <constraint firstItem="eEc-5r-llM" firstAttribute="bottom" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="56" id="wpB-7u-zDA"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="Dty-RV-oMa" secondAttribute="bottom" constant="10" id="zcB-K9-yiX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BwH-71-0it"/>
@@ -244,6 +280,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Lif-hu-84E"/>
         <segue reference="TF4-Pw-vbo"/>
     </inferredMetricsTieBreakers>
     <resources>
