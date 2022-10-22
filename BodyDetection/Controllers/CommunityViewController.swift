@@ -18,7 +18,7 @@ class CommunityViewController: UIViewController, UICollectionViewDelegateFlowLay
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         // Do any additional setup after loading the view.
-        imageData = ["AppIcon"]
+        imageData = ["grid_1"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,7 +57,7 @@ class CommunityViewController: UIViewController, UICollectionViewDelegateFlowLay
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: 138, height: 138)
+        return CGSize(width:  self.view.frame.size.width / 3, height:  self.view.frame.size.width / 3)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
