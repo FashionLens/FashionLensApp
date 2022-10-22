@@ -23,6 +23,9 @@ class ViewController: UIViewController, ARSessionDelegate {
         super.viewDidAppear(animated)
         arView.session.delegate = self
         
+        let vc = AuthViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
         // If the iOS device doesn't support body tracking, raise a developer error for
         // this unhandled case.
         guard ARBodyTrackingConfiguration.isSupported else {

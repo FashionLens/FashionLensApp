@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C8C7868228387D2006A6EE1 /* character in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C7867228387D2006A6EE1 /* character */; };
+		2751A4892903A4EA0062778E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751A4882903A4EA0062778E /* AuthViewController.swift */; };
+		2751A48B2903A4FD0062778E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751A48A2903A4FD0062778E /* Auth.storyboard */; };
+		2751A48D2903A5CF0062778E /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751A48C2903A5CF0062778E /* FloatingTextField.swift */; };
 		279F59D429038ED700D86E8C /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59D329038ED700D86E8C /* SlideOverCard */; };
 		279F59D6290390D200D86E8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 279F59D5290390D200D86E8C /* GoogleService-Info.plist */; };
 		279F59D9290391A700D86E8C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59D8290391A700D86E8C /* FirebaseAnalytics */; };
@@ -22,11 +25,13 @@
 		2F60E1E422631E0F00357E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E322631E0F00357E98 /* Assets.xcassets */; };
 		2F60E1E722631E0F00357E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E522631E0F00357E98 /* LaunchScreen.storyboard */; };
 		718E55BC2289F8FF00A9B13B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 718E55BB2289F8FF00A9B13B /* README.md */; };
-		875669807EA4E86CB4F4441F /* Pods_BodyDetection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A99FB248DD333490B9D915D /* Pods_BodyDetection.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C8C7867228387D2006A6EE1 /* character */ = {isa = PBXFileReference; lastKnownFileType = folder; path = character; sourceTree = "<group>"; };
+		2751A4882903A4EA0062778E /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		2751A48A2903A4FD0062778E /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		2751A48C2903A5CF0062778E /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		279F59D5290390D200D86E8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F60E1D822631E0E00357E98 /* BodyDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F60E1DA22631E0F00357E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,12 +40,9 @@
 		2F60E1E322631E0F00357E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F60E1E622631E0F00357E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F60E1EB22631E0F00357E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A99FB248DD333490B9D915D /* Pods_BodyDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BodyDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCA879A14A3351D9E9CEA98 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		718E55BB2289F8FF00A9B13B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		78F4E054153DD3A4202C28BA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		8D46188A1B782842BC88E9A8 /* Pods-BodyDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BodyDetection.debug.xcconfig"; path = "Target Support Files/Pods-BodyDetection/Pods-BodyDetection.debug.xcconfig"; sourceTree = "<group>"; };
-		D3270C8F7374537E7713E530 /* Pods-BodyDetection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BodyDetection.release.xcconfig"; path = "Target Support Files/Pods-BodyDetection/Pods-BodyDetection.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,21 +57,12 @@
 				279F59E3290391A700D86E8C /* FirebaseStorage in Frameworks */,
 				279F59DF290391A700D86E8C /* FirebaseFirestore in Frameworks */,
 				279F59D429038ED700D86E8C /* SlideOverCard in Frameworks */,
-				875669807EA4E86CB4F4441F /* Pods_BodyDetection.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09D9B2EC4204BFEA6C5BFF96 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5A99FB248DD333490B9D915D /* Pods_BodyDetection.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		29819F71B3026A375E893049 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +79,6 @@
 				2F60E1BB22631DCF00357E98 /* Products */,
 				29819F71B3026A375E893049 /* Configuration */,
 				5CAEF4054B950A25D1A4FF99 /* LICENSE */,
-				7ED760E15C26ABEA64927743 /* Pods */,
-				09D9B2EC4204BFEA6C5BFF96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +96,9 @@
 				279F59D5290390D200D86E8C /* GoogleService-Info.plist */,
 				2F60E1DA22631E0F00357E98 /* AppDelegate.swift */,
 				2F60E1DC22631E0F00357E98 /* ViewController.swift */,
+				2751A4882903A4EA0062778E /* AuthViewController.swift */,
+				2751A48A2903A4FD0062778E /* Auth.storyboard */,
+				2751A48C2903A5CF0062778E /* FloatingTextField.swift */,
 				0C8C7867228387D2006A6EE1 /* character */,
 				2F60E1E022631E0F00357E98 /* Main.storyboard */,
 				2F60E1E322631E0F00357E98 /* Assets.xcassets */,
@@ -122,16 +116,6 @@
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
-		7ED760E15C26ABEA64927743 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8D46188A1B782842BC88E9A8 /* Pods-BodyDetection.debug.xcconfig */,
-				D3270C8F7374537E7713E530 /* Pods-BodyDetection.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,11 +123,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F60E1EE22631E0F00357E98 /* Build configuration list for PBXNativeTarget "BodyDetection" */;
 			buildPhases = (
-				FC6E596C7C746CF5AAB92E10 /* [CP] Check Pods Manifest.lock */,
 				2F60E1D422631E0E00357E98 /* Sources */,
 				2F60E1D522631E0E00357E98 /* Frameworks */,
 				2F60E1D622631E0E00357E98 /* Resources */,
-				C027AEEAF623EB8243727B80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,7 +171,7 @@
 			);
 			mainGroup = 2F60E1B122631DCF00357E98;
 			packageReferences = (
-				279F59D229038ED700D86E8C /* XCRemoteSwiftPackageReference "SlideOverCard.git" */,
+				279F59D229038ED700D86E8C /* XCRemoteSwiftPackageReference "SlideOverCard" */,
 				279F59D7290391A700D86E8C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2F60E1BB22631DCF00357E98 /* Products */;
@@ -212,52 +194,11 @@
 				2F60E1E422631E0F00357E98 /* Assets.xcassets in Resources */,
 				2F60E1E222631E0F00357E98 /* Main.storyboard in Resources */,
 				279F59D6290390D200D86E8C /* GoogleService-Info.plist in Resources */,
+				2751A48B2903A4FD0062778E /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C027AEEAF623EB8243727B80 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BodyDetection/Pods-BodyDetection-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BodyDetection/Pods-BodyDetection-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BodyDetection/Pods-BodyDetection-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC6E596C7C746CF5AAB92E10 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BodyDetection-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F60E1D422631E0E00357E98 /* Sources */ = {
@@ -265,7 +206,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F60E1DD22631E0F00357E98 /* ViewController.swift in Sources */,
+				2751A4892903A4EA0062778E /* AuthViewController.swift in Sources */,
 				2F60E1DB22631E0F00357E98 /* AppDelegate.swift in Sources */,
+				2751A48D2903A5CF0062778E /* FloatingTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +430,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		279F59D229038ED700D86E8C /* XCRemoteSwiftPackageReference "SlideOverCard.git" */ = {
+		279F59D229038ED700D86E8C /* XCRemoteSwiftPackageReference "SlideOverCard" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/joogps/SlideOverCard.git";
 			requirement = {
@@ -508,7 +451,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		279F59D329038ED700D86E8C /* SlideOverCard */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 279F59D229038ED700D86E8C /* XCRemoteSwiftPackageReference "SlideOverCard.git" */;
+			package = 279F59D229038ED700D86E8C /* XCRemoteSwiftPackageReference "SlideOverCard" */;
 			productName = SlideOverCard;
 		};
 		279F59D8290391A700D86E8C /* FirebaseAnalytics */ = {
