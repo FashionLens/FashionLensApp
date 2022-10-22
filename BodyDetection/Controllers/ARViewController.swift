@@ -109,21 +109,48 @@ class ARViewController: UIViewController, ARSessionDelegate {
     
     
     @IBAction func button1Click(_ sender: UIButton) {
-        print("button 1 clicked")
+        selectButton(i: 0)
     }
     
     
     @IBAction func button2Click(_ sender: UIButton) {
-        print("button 2 clicked")
+        selectButton(i: 1)
     }
     
     
     @IBAction func button3Click(_ sender: UIButton) {
-        print("button 3 clicked")
+        selectButton(i: 2)
     }
     
     
     @IBAction func button4Click(_ sender: UIButton) {
-        print("button 4 clicked")
+        selectButton(i: 3)
+    }
+    
+    func resetButtonSizes() {
+        let normalBtnConfig = UIImage.SymbolConfiguration(pointSize: 65, weight: .semibold, scale: .large)
+        let normalBtnImage = UIImage(systemName: "circle", withConfiguration: normalBtnConfig)
+       
+        button1.setImage(normalBtnImage, for: .normal)
+        button2.setImage(normalBtnImage, for: .normal)
+        button3.setImage(normalBtnImage, for: .normal)
+        button4.setImage(normalBtnImage, for: .normal)
+    }
+    
+    func selectButton(i: Int32) {
+        resetButtonSizes()
+        
+        let largeBtnConfig = UIImage.SymbolConfiguration(pointSize: 100, weight: .semibold, scale: .large)
+        let largeBtnImage = UIImage(systemName: "circle", withConfiguration: largeBtnConfig)
+        
+        if (i == 0) {
+            button1.setImage(largeBtnImage, for: .normal)
+        } else if (i == 1) {
+            button2.setImage(largeBtnImage, for: .normal)
+        } else if (i == 2) {
+            button3.setImage(largeBtnImage, for: .normal)
+        } else if (i == 3) {
+            button4.setImage(largeBtnImage, for: .normal)
+        }
     }
 }
