@@ -10,6 +10,11 @@ import UIKit
 
 class CommunityViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    @IBOutlet weak var b1: UIButton!
+    @IBOutlet weak var b2: UIButton!
+    @IBOutlet weak var b3: UIButton!
+    @IBOutlet weak var b4: UIButton!
+    
     var imageData: [String] = [String]()
     var imageCounter: Int = 0
     
@@ -19,6 +24,20 @@ class CommunityViewController: UIViewController, UICollectionViewDelegateFlowLay
         
         // Do any additional setup after loading the view.
         imageData = ["grid_1"]
+        
+        b1.titleLabel!.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
+        b2.titleLabel!.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
+        b3.titleLabel!.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
+        b4.titleLabel!.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
+        
+        b1.titleLabel!.adjustsFontSizeToFitWidth = true
+        b1.titleLabel!.minimumScaleFactor = 0.01
+        b2.titleLabel!.adjustsFontSizeToFitWidth = true
+        b2.titleLabel!.minimumScaleFactor = 0.01
+        b3.titleLabel!.adjustsFontSizeToFitWidth = true
+        b3.titleLabel!.minimumScaleFactor = 0.01
+        b4.titleLabel!.adjustsFontSizeToFitWidth = true
+        b4.titleLabel!.minimumScaleFactor = 0.01
     }
     
     override func didReceiveMemoryWarning() {

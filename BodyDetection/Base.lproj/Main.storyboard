@@ -126,8 +126,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-8d-EEq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-8d-EEq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="SSF-1P-1Tq"/>
@@ -147,7 +147,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-0Y-P1q">
-                                                    <rect key="frame" x="-1" y="-1" width="144" height="144"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="140"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -163,53 +163,85 @@
                                 </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="x3n-df-Zit">
-                                <rect key="frame" x="0.0" y="782" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="783" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="5Gr-J5-2sL" id="HkK-0E-qoX"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-Qu-9Tc">
-                                <rect key="frame" x="36" y="737" width="75" height="35"/>
+                                <rect key="frame" x="24" y="739" width="88" height="34"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="👕Shirts">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-Ar-Ue8">
-                                <rect key="frame" x="126" y="737" width="75" height="35"/>
+                                <rect key="frame" x="125" y="739" width="67" height="34"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pants">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-Dy-oHk">
-                                <rect key="frame" x="215" y="737" width="75" height="35"/>
+                                <rect key="frame" x="181" y="739" width="145" height="34"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="👗Cute Dresses">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dty-RV-oMa">
-                                <rect key="frame" x="304" y="737" width="75" height="35"/>
+                                <rect key="frame" x="310" y="739" width="76" height="34"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Suits">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eEc-5r-llM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fvp-Ar-Ue8" firstAttribute="leading" secondItem="z99-Qu-9Tc" secondAttribute="trailing" constant="15" id="2Jg-AT-xAr"/>
+                            <constraint firstItem="eEc-5r-llM" firstAttribute="trailing" secondItem="Dty-RV-oMa" secondAttribute="trailing" constant="30" id="1dF-zk-Anr"/>
+                            <constraint firstItem="fvp-Ar-Ue8" firstAttribute="leading" secondItem="z99-Qu-9Tc" secondAttribute="trailing" constant="20" id="2Jg-AT-xAr"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="top" secondItem="7Pb-sN-wSR" secondAttribute="top" id="Emy-OV-XCZ"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="Fp4-LQ-63E"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="N4b-iN-0Rz"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="fvp-Ar-Ue8" secondAttribute="bottom" constant="10" id="QlU-xD-2LM"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="z99-Qu-9Tc" secondAttribute="bottom" constant="10" id="UJT-tW-DCB"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="XjK-gd-4rW"/>
-                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="kgQ-8d-EEq" secondAttribute="bottom" id="ejL-2n-KNm"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="55" id="ejL-2n-KNm"/>
                             <constraint firstItem="wPN-Dy-oHk" firstAttribute="leading" secondItem="fvp-Ar-Ue8" secondAttribute="trailing" constant="20" id="gSy-ZM-MQh"/>
                             <constraint firstItem="Dty-RV-oMa" firstAttribute="leading" secondItem="wPN-Dy-oHk" secondAttribute="trailing" constant="20" id="nf2-4F-Qzf"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="wPN-Dy-oHk" secondAttribute="bottom" constant="10" id="oMA-hZ-JRj"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="wbE-51-kRm"/>
-                            <constraint firstItem="eEc-5r-llM" firstAttribute="bottom" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="56" id="wpB-7u-zDA"/>
+                            <constraint firstItem="eEc-5r-llM" firstAttribute="bottom" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="110" id="wpB-7u-zDA"/>
                             <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="Dty-RV-oMa" secondAttribute="bottom" constant="10" id="zcB-K9-yiX"/>
+                            <constraint firstItem="z99-Qu-9Tc" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" constant="30" id="zuz-d8-LCu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BwH-71-0it"/>
+                    <connections>
+                        <outlet property="b1" destination="z99-Qu-9Tc" id="arv-E0-EfW"/>
+                        <outlet property="b2" destination="fvp-Ar-Ue8" id="CaY-h5-uxZ"/>
+                        <outlet property="b3" destination="wPN-Dy-oHk" id="7Ek-JX-vLH"/>
+                        <outlet property="b4" destination="Dty-RV-oMa" id="R1E-gd-jk8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2y-rf-I3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +320,9 @@
         <image name="welcome_image" width="994.40533447265625" height="678.13323974609375"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
