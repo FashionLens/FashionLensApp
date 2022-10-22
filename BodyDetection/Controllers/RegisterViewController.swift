@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet weak var usernameInput: FloatingTextField!
     @IBOutlet weak var passwordInput: FloatingTextField!
     @IBOutlet weak var enterButton: UIButton!
@@ -18,10 +18,10 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-
+        
         // Do any additional setup after loading the view.
         self.hideKeyboardOnTapAround()
-
+        
         // Styling textfields
         usernameInput.borderStyle = UITextField.BorderStyle.roundedRect
         passwordInput.borderStyle = UITextField.BorderStyle.roundedRect
@@ -44,13 +44,13 @@ class RegisterViewController: UIViewController {
                     let alert = UIAlertController(title: "Warning!", message: e.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                         switch action.style{
-                            case .default:
+                        case .default:
                             print("default")
                             
-                            case .cancel:
+                        case .cancel:
                             print("cancel")
                             
-                            case .destructive:
+                        case .destructive:
                             print("destructive")
                             
                         @unknown default:
@@ -63,17 +63,6 @@ class RegisterViewController: UIViewController {
                 }
             }
         }
-
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

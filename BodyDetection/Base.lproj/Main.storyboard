@@ -96,20 +96,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4js-pV-iU6">
-                                <rect key="frame" x="342" y="789" width="52" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle.stack.fill" catalog="system" title=""/>
-                                <connections>
-                                    <segue destination="5Gr-J5-2sL" kind="show" id="7e0-wi-zmh"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-X6-fro">
                                 <rect key="frame" x="0.0" y="636" width="414" height="128"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2x0-Fw-ZuL">
-                                        <rect key="frame" x="0.0" y="0.0" width="786" height="128"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2x0-Fw-ZuL">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="88"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D9R-rn-eCG">
                                                 <rect key="frame" x="0.0" y="0.0" width="786" height="128"/>
@@ -301,6 +292,14 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="D1P-7L-06h"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="37M-gF-OLb"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4js-pV-iU6">
+                                <rect key="frame" x="94" y="793.5" width="226" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle.stack.fill" catalog="system" title="Open Community View"/>
+                                <connections>
+                                    <segue destination="5Gr-J5-2sL" kind="show" id="7e0-wi-zmh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -310,6 +309,8 @@
                             <constraint firstItem="oEZ-X6-fro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMx-V5-eLJ"/>
                             <constraint firstItem="oEZ-X6-fro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="588" id="Q9s-rF-49D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oEZ-X6-fro" secondAttribute="bottom" constant="74" id="dHT-xb-I0J"/>
+                            <constraint firstItem="4js-pV-iU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQu-dU-Rnn"/>
+                            <constraint firstItem="4js-pV-iU6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="vr3-pw-w2F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c5P-ny-42L"/>
@@ -354,7 +355,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-0Y-P1q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="140"/>
+                                                    <rect key="frame" x="-1" y="1" width="143" height="140"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -377,7 +378,7 @@
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-Qu-9Tc">
-                                <rect key="frame" x="24" y="739" width="88" height="34"/>
+                                <rect key="frame" x="30" y="739" width="88" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="👕Shirts">
                                     <backgroundConfiguration key="background">
@@ -388,7 +389,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-Ar-Ue8">
-                                <rect key="frame" x="125" y="739" width="67" height="34"/>
+                                <rect key="frame" x="138" y="739" width="67" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Pants">
                                     <backgroundConfiguration key="background">
@@ -399,7 +400,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-Dy-oHk">
-                                <rect key="frame" x="181" y="739" width="145" height="34"/>
+                                <rect key="frame" x="225" y="739" width="145" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="👗Cute Dresses">
                                     <backgroundConfiguration key="background">
@@ -410,7 +411,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dty-RV-oMa">
-                                <rect key="frame" x="310" y="739" width="76" height="34"/>
+                                <rect key="frame" x="390" y="739" width="61.333333333333314" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Suits">
                                     <backgroundConfiguration key="background">
@@ -523,12 +524,12 @@
         <segue reference="TF4-Pw-vbo"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="person.crop.rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <image name="0_space_suit" width="725" height="725"/>
         <image name="1_good_hoodie" width="725" height="725"/>
         <image name="2_good_csi_suit" width="725" height="725"/>
         <image name="3_cyber_punk" width="725" height="725"/>
         <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <image name="welcome_image" width="994.40533447265625" height="678.13323974609375"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
