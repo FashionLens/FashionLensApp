@@ -39,6 +39,9 @@ class ARViewController: UIViewController, ARSessionDelegate {
     let characterOffset: SIMD3<Float> = [0, 0, 0] // Offset the character by one meter to the left
     let characterAnchor = AnchorEntity()
     
+    let clothingList = ["character/good_space_suit", "character/good_hoodie_pants_V2", "character/good_csi_suit",
+        "character/test1"]
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         arView.session.delegate = self
@@ -65,9 +68,33 @@ class ARViewController: UIViewController, ARSessionDelegate {
         directLightAnchor.addChild(light)
         characterAnchor.addChild(directLightAnchor)
                 
+        loadModel(i: 0)
+//        // Asynchronously load the 3D character.
+//        var cancellable: AnyCancellable? = nil
+//        cancellable = Entity.loadBodyTrackedAsync(named: "character/good_space_suit").sink(
+//            receiveCompletion: { completion in
+//                if case let .failure(error) = completion {
+//                    print("Error: Unable to load model: \(error.localizedDescription)")
+//                }
+//                cancellable?.cancel()
+//        }, receiveValue: { (character: Entity) in
+//            if let character = character as? BodyTrackedEntity {
+//                // Scale the character to human size
+//                character.scale = [0.01, 0.01, 0.01]
+//                character.position = [0.0, 0.0, 0.0]
+////                character.orientation = simd_quatf(angle: -3.14/4, axis: SIMD3(1, 0, 0))
+//                self.character = character
+//                cancellable?.cancel()
+//            } else {
+//                print("Error: Unable to load model as BodyTrackedEntity")
+//            }
+//        })
+    }
+    
+    func loadModel(i: Int32) {
         // Asynchronously load the 3D character.
         var cancellable: AnyCancellable? = nil
-        cancellable = Entity.loadBodyTrackedAsync(named: "character/good_space_suit").sink(
+        cancellable = Entity.loadBodyTrackedAsync(named: clothingList[Int(i)]).sink(
             receiveCompletion: { completion in
                 if case let .failure(error) = completion {
                     print("Error: Unable to load model: \(error.localizedDescription)")
@@ -142,6 +169,8 @@ class ARViewController: UIViewController, ARSessionDelegate {
         
         let largeBtnConfig = UIImage.SymbolConfiguration(pointSize: 100, weight: .semibold, scale: .large)
         let largeBtnImage = UIImage(systemName: "circle", withConfiguration: largeBtnConfig)
+        
+        loadModel(i: i)
         
         if (i == 0) {
             button1.setImage(largeBtnImage, for: .normal)
