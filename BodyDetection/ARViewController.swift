@@ -10,7 +10,7 @@ import RealityKit
 import ARKit
 import Combine
 
-class ViewController: UIViewController, ARSessionDelegate {
+class ARViewController: UIViewController, ARSessionDelegate {
 
     @IBOutlet var arView: ARView!
     
@@ -22,10 +22,8 @@ class ViewController: UIViewController, ARSessionDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         arView.session.delegate = self
-        
-        let vc = AuthViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         // If the iOS device doesn't support body tracking, raise a developer error for
         // this unhandled case.
         guard ARBodyTrackingConfiguration.isSupported else {

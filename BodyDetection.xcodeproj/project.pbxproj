@@ -20,7 +20,7 @@
 		279F59E1290391A700D86E8C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59E0290391A700D86E8C /* FirebaseFunctions */; };
 		279F59E3290391A700D86E8C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59E2290391A700D86E8C /* FirebaseStorage */; };
 		2F60E1DB22631E0F00357E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60E1DA22631E0F00357E98 /* AppDelegate.swift */; };
-		2F60E1DD22631E0F00357E98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60E1DC22631E0F00357E98 /* ViewController.swift */; };
+		2F60E1DD22631E0F00357E98 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60E1DC22631E0F00357E98 /* ARViewController.swift */; };
 		2F60E1E222631E0F00357E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E022631E0F00357E98 /* Main.storyboard */; };
 		2F60E1E422631E0F00357E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E322631E0F00357E98 /* Assets.xcassets */; };
 		2F60E1E722631E0F00357E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E522631E0F00357E98 /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		279F59D5290390D200D86E8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2F60E1D822631E0E00357E98 /* BodyDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F60E1DA22631E0F00357E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F60E1DC22631E0F00357E98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F60E1DC22631E0F00357E98 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		2F60E1E122631E0F00357E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F60E1E322631E0F00357E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F60E1E622631E0F00357E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			children = (
 				279F59D5290390D200D86E8C /* GoogleService-Info.plist */,
 				2F60E1DA22631E0F00357E98 /* AppDelegate.swift */,
-				2F60E1DC22631E0F00357E98 /* ViewController.swift */,
+				2F60E1DC22631E0F00357E98 /* ARViewController.swift */,
 				2751A4882903A4EA0062778E /* AuthViewController.swift */,
 				2751A48A2903A4FD0062778E /* Auth.storyboard */,
 				2751A48C2903A5CF0062778E /* FloatingTextField.swift */,
@@ -205,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F60E1DD22631E0F00357E98 /* ViewController.swift in Sources */,
+				2F60E1DD22631E0F00357E98 /* ARViewController.swift in Sources */,
 				2751A4892903A4EA0062778E /* AuthViewController.swift in Sources */,
 				2F60E1DB22631E0F00357E98 /* AppDelegate.swift in Sources */,
 				2751A48D2903A5CF0062778E /* FloatingTextField.swift in Sources */,

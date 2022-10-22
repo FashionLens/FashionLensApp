@@ -10,14 +10,15 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
-    @IBOutlet weak var usernameInput: FloatingTextField!
+//    @IBOutlet weak var usernameInput: FloatingTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
 
         // Do any additional setup after loading the view.
-        self.hideKeyboardOnTapAround()
-        self.usernameInput.becomeFirstResponder()
+//        self.hideKeyboardOnTapAround()
+//        self.usernameInput.becomeFirstResponder()
     }
     
     func hideKeyboardOnTapAround() {
