@@ -24,7 +24,7 @@ class CommunityViewController: UIViewController, UICollectionViewDelegateFlowLay
         self.navigationItem.title = "Community";
         
         // Do any additional setup after loading the view.
-        imageData = ["grid_1"]
+        imageData = ["astronaut", "grid_1", "1", "2", "3", "4", "5", "6"]
         
         b1.titleLabel!.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
         b2.titleLabel!.font = UIFont(name:"HelveticaNeue-Bold", size: 12.0)
