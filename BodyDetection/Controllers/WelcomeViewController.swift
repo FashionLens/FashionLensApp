@@ -12,7 +12,7 @@ import Firebase
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var usernameInput: FloatingTextField!
-    @IBOutlet weak var passwordInput: UITextField!
+    @IBOutlet weak var passwordInput: FloatingTextField!
     @IBOutlet weak var enterButton: UIButton!
     
     @IBAction func enterClick(_ sender: Any) {
@@ -50,7 +50,17 @@ class WelcomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.hideKeyboardOnTapAround()
-        self.usernameInput.becomeFirstResponder()
+        
+        // Styling textfields
+        usernameInput.borderStyle = UITextField.BorderStyle.roundedRect
+        passwordInput.borderStyle = UITextField.BorderStyle.roundedRect
+        
+        // Add box shadow on enter button
+        enterButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        enterButton.layer.shadowOffset = CGSize(width: 1, height: 3)
+        enterButton.layer.shadowOpacity = 1.0
+        enterButton.layer.shadowRadius = 10.0
+        enterButton.layer.masksToBounds = false
     }
     
     func hideKeyboardOnTapAround() {

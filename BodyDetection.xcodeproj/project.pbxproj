@@ -10,6 +10,7 @@
 		0C8C7868228387D2006A6EE1 /* character in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C7867228387D2006A6EE1 /* character */; };
 		2751A48B2903A4FD0062778E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751A48A2903A4FD0062778E /* Auth.storyboard */; };
 		2751A48D2903A5CF0062778E /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751A48C2903A5CF0062778E /* FloatingTextField.swift */; };
+		276CC5DF29044C3800FFF6AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276CC5DE29044C3800FFF6AA /* GoogleService-Info.plist */; };
 		279F59D429038ED700D86E8C /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59D329038ED700D86E8C /* SlideOverCard */; };
 		279F59D9290391A700D86E8C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59D8290391A700D86E8C /* FirebaseAnalytics */; };
 		279F59DB290391A700D86E8C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59DA290391A700D86E8C /* FirebaseAuth */; };
