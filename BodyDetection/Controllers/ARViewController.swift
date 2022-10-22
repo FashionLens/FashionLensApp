@@ -39,7 +39,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
     let characterOffset: SIMD3<Float> = [0, 0, 0] // Offset the character by one meter to the left
     let characterAnchor = AnchorEntity()
     
-    let clothingList = ["character/good_space_suit", "character/good_hoodie_pants_V2", "character/good_csi_suit",
+    let clothingList = ["character/good_space_suit", "character/good_hoodie_pants_v2", "character/good_csi_suit",
         "character/test1"]
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,28 +67,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
         let directLightAnchor = AnchorEntity()
         directLightAnchor.addChild(light)
         characterAnchor.addChild(directLightAnchor)
-                
-        loadModel(i: 0)
-//        // Asynchronously load the 3D character.
-//        var cancellable: AnyCancellable? = nil
-//        cancellable = Entity.loadBodyTrackedAsync(named: "character/good_space_suit").sink(
-//            receiveCompletion: { completion in
-//                if case let .failure(error) = completion {
-//                    print("Error: Unable to load model: \(error.localizedDescription)")
-//                }
-//                cancellable?.cancel()
-//        }, receiveValue: { (character: Entity) in
-//            if let character = character as? BodyTrackedEntity {
-//                // Scale the character to human size
-//                character.scale = [0.01, 0.01, 0.01]
-//                character.position = [0.0, 0.0, 0.0]
-////                character.orientation = simd_quatf(angle: -3.14/4, axis: SIMD3(1, 0, 0))
-//                self.character = character
-//                cancellable?.cancel()
-//            } else {
-//                print("Error: Unable to load model as BodyTrackedEntity")
-//            }
-//        })
+        selectButton(i: 0)
     }
     
     func loadModel(i: Int32) {
@@ -107,6 +86,8 @@ class ARViewController: UIViewController, ARSessionDelegate {
                 character.position = [0.0, 0.0, 0.0]
 //                character.orientation = simd_quatf(angle: -3.14/4, axis: SIMD3(1, 0, 0))
                 self.character = character
+                self.characterAnchor.children.forEach{en in en.removeFromParent()}
+                self.characterAnchor.addChild(character)
                 cancellable?.cancel()
             } else {
                 print("Error: Unable to load model as BodyTrackedEntity")
@@ -126,9 +107,6 @@ class ARViewController: UIViewController, ARSessionDelegate {
             characterAnchor.orientation = Transform(matrix: bodyAnchor.transform).rotation
    
             if let character = character, character.parent == nil {
-                // Attach the character to its anchor as soon as
-                // 1. the body anchor was detected and
-                // 2. the character was loaded.
                 characterAnchor.addChild(character)
             }
         }
