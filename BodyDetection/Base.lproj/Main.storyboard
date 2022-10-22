@@ -118,11 +118,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-8d-EEq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="782"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="SSF-1P-1Tq"/>
-                                    <constraint firstAttribute="height" constant="758" id="ygO-gH-yx1"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="70E-M0-uzQ">
                                     <size key="itemSize" width="142.30000000000001" height="142.30000000000001"/>
@@ -139,7 +138,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-0Y-P1q">
-                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="141"/>
+                                                    <rect key="frame" x="-1" y="-1" width="144" height="144"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -154,14 +153,24 @@
                                     <outlet property="delegate" destination="5Gr-J5-2sL" id="EHl-cb-3d5"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="x3n-df-Zit">
+                                <rect key="frame" x="0.0" y="782" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5Gr-J5-2sL" id="HkK-0E-qoX"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eEc-5r-llM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="top" secondItem="7Pb-sN-wSR" secondAttribute="top" id="Emy-OV-XCZ"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="Fp4-LQ-63E"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="N4b-iN-0Rz"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="XjK-gd-4rW"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="kgQ-8d-EEq" secondAttribute="bottom" id="ejL-2n-KNm"/>
                             <constraint firstItem="kgQ-8d-EEq" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="wbE-51-kRm"/>
-                            <constraint firstItem="eEc-5r-llM" firstAttribute="bottom" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="80" id="wpB-7u-zDA"/>
+                            <constraint firstItem="eEc-5r-llM" firstAttribute="bottom" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="56" id="wpB-7u-zDA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BwH-71-0it"/>
