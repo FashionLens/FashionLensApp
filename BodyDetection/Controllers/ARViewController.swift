@@ -26,6 +26,14 @@ class ARViewController: UIViewController, ARSessionDelegate {
 
     @IBOutlet var arView: ARView!
     
+    @IBOutlet weak var button1: UIButton!
+    
+    @IBOutlet weak var button2: UIButton!
+    
+    @IBOutlet weak var button3: UIButton!
+    
+    @IBOutlet weak var button4: UIButton!
+    
     // The 3D character to display.
     var character: BodyTrackedEntity?
     let characterOffset: SIMD3<Float> = [0, 0, 0] // Offset the character by one meter to the left
@@ -97,5 +105,25 @@ class ARViewController: UIViewController, ARSessionDelegate {
                 characterAnchor.addChild(character)
             }
         }
+    }
+    
+    
+    @IBAction func button1Click(_ sender: UIButton) {
+        print("button 1 clicked")
+    }
+    
+    
+    @IBAction func button2Click(_ sender: UIButton) {
+        print("button 2 clicked")
+    }
+    
+    
+    @IBAction func button3Click(_ sender: UIButton) {
+        print("button 3 clicked")
+    }
+    
+    
+    @IBAction func button4Click(_ sender: UIButton) {
+        print("button 4 clicked")
     }
 }

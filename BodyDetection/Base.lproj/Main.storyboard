@@ -109,6 +109,9 @@
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="semibold"/>
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="button1Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQM-xF-aDW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -129,6 +132,9 @@
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="semibold"/>
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="button2Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LU-Ht-xuV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -149,6 +155,9 @@
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="semibold"/>
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="button3Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvQ-1l-jKb"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -169,6 +178,9 @@
                                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="semibold"/>
                                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="button4Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVq-U9-cPJ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -222,6 +234,10 @@
                     <navigationItem key="navigationItem" id="c5P-ny-42L"/>
                     <connections>
                         <outlet property="arView" destination="8bC-Xf-vdC" id="hvU-Ek-za3"/>
+                        <outlet property="button1" destination="JAu-Hc-kj7" id="X1p-Ft-WKd"/>
+                        <outlet property="button2" destination="NeH-Mw-NTC" id="YtA-T8-Z7F"/>
+                        <outlet property="button3" destination="CWI-gp-9OX" id="1Pw-07-YMZ"/>
+                        <outlet property="button4" destination="gfX-ZN-68a" id="fah-gH-7ju"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
