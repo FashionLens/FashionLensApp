@@ -86,19 +86,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL6-zy-evF">
-                                <rect key="frame" x="157" y="649" width="100" height="103"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="103" id="ifT-Zf-LRv"/>
-                                    <constraint firstAttribute="width" constant="100" id="ow4-wR-U9F"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="">
-                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large" variableValue="1"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="heavy"/>
-                                </buttonConfiguration>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-X6-fro">
                                 <rect key="frame" x="0.0" y="636" width="414" height="128"/>
                                 <subviews>
@@ -109,16 +96,90 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="786" height="128"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75y-oR-kxu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="262" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="128"/>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMz-VH-swc">
-                                                        <rect key="frame" x="262" y="0.0" width="262" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWn-A9-QXL">
+                                                        <rect key="frame" x="131" y="0.0" width="131" height="128"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAu-Hc-kj7">
+                                                                <rect key="frame" x="33" y="0.0" width="65.5" height="128"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="heavy"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="JAu-Hc-kj7" firstAttribute="top" secondItem="UWn-A9-QXL" secondAttribute="top" id="0uK-ds-YfB"/>
+                                                            <constraint firstAttribute="bottom" secondItem="JAu-Hc-kj7" secondAttribute="bottom" id="3L5-Oo-M5u"/>
+                                                            <constraint firstItem="JAu-Hc-kj7" firstAttribute="leading" secondItem="UWn-A9-QXL" secondAttribute="leading" constant="33" id="l6G-ea-Ad8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JAu-Hc-kj7" secondAttribute="trailing" constant="32.5" id="uKG-R2-aR5"/>
+                                                        </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x44-5a-GCs">
-                                                        <rect key="frame" x="524" y="0.0" width="262" height="128"/>
-                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ak-5A-DCF">
+                                                        <rect key="frame" x="262" y="0.0" width="131" height="128"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeH-Mw-NTC">
+                                                                <rect key="frame" x="33" y="0.0" width="65.5" height="128"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="heavy"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="NeH-Mw-NTC" firstAttribute="top" secondItem="9ak-5A-DCF" secondAttribute="top" id="4Oy-yE-YBC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NeH-Mw-NTC" secondAttribute="trailing" constant="32.5" id="5WZ-7n-MtM"/>
+                                                            <constraint firstAttribute="bottom" secondItem="NeH-Mw-NTC" secondAttribute="bottom" id="O2E-9c-uhq"/>
+                                                            <constraint firstItem="NeH-Mw-NTC" firstAttribute="leading" secondItem="9ak-5A-DCF" secondAttribute="leading" constant="33" id="fyb-SJ-RHQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piH-mn-ux2">
+                                                        <rect key="frame" x="393" y="0.0" width="131" height="128"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWI-gp-9OX">
+                                                                <rect key="frame" x="33" y="0.0" width="65.5" height="128"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="heavy"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="CWI-gp-9OX" firstAttribute="leading" secondItem="piH-mn-ux2" secondAttribute="leading" constant="33" id="FGO-gW-mwJ"/>
+                                                            <constraint firstAttribute="bottom" secondItem="CWI-gp-9OX" secondAttribute="bottom" id="RtH-Zh-9x6"/>
+                                                            <constraint firstItem="CWI-gp-9OX" firstAttribute="top" secondItem="piH-mn-ux2" secondAttribute="top" id="hxt-FN-Abv"/>
+                                                            <constraint firstAttribute="trailing" secondItem="CWI-gp-9OX" secondAttribute="trailing" constant="32.5" id="tKf-KA-qoQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ft-Qk-bbZ">
+                                                        <rect key="frame" x="524" y="0.0" width="131" height="128"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-ZN-68a">
+                                                                <rect key="frame" x="33" y="0.0" width="65.5" height="128"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="  ">
+                                                                    <imageReference key="image" image="circle" catalog="system" symbolScale="large"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="65" scale="large" weight="heavy"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="gfX-ZN-68a" secondAttribute="trailing" constant="32.5" id="3g4-AY-62H"/>
+                                                            <constraint firstAttribute="bottom" secondItem="gfX-ZN-68a" secondAttribute="bottom" id="JAC-KU-2ar"/>
+                                                            <constraint firstItem="gfX-ZN-68a" firstAttribute="top" secondItem="4Ft-Qk-bbZ" secondAttribute="top" id="Qkb-rU-Hnv"/>
+                                                            <constraint firstItem="gfX-ZN-68a" firstAttribute="leading" secondItem="4Ft-Qk-bbZ" secondAttribute="leading" constant="33" id="k1b-Ae-fR0"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-0u-MUN">
+                                                        <rect key="frame" x="655" y="0.0" width="131" height="128"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -126,7 +187,6 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="D9R-rn-eCG" firstAttribute="top" secondItem="2x0-Fw-ZuL" secondAttribute="top" id="D2y-Fq-7Er"/>
                                             <constraint firstAttribute="width" constant="786" id="DYO-Ez-Pmv"/>
@@ -154,13 +214,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="oEZ-X6-fro" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4vo-oY-LVG"/>
-                            <constraint firstItem="RL6-zy-evF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="601" id="925-Cb-5Dc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RL6-zy-evF" secondAttribute="trailing" constant="157" id="EIs-Gh-pa7"/>
                             <constraint firstItem="oEZ-X6-fro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OMx-V5-eLJ"/>
                             <constraint firstItem="oEZ-X6-fro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="588" id="Q9s-rF-49D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oEZ-X6-fro" secondAttribute="bottom" constant="74" id="dHT-xb-I0J"/>
-                            <constraint firstItem="RL6-zy-evF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="157" id="z9n-9f-efY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RL6-zy-evF" secondAttribute="bottom" constant="86" id="zKf-qJ-qeD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c5P-ny-42L"/>
@@ -242,17 +298,8 @@
     <resources>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="welcome_image" width="994.40533447265625" height="678.13323974609375"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
