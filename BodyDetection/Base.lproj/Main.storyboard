@@ -356,10 +356,28 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-0Y-P1q">
-                                                    <rect key="frame" x="0.0" y="1" width="143" height="140"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="139"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5S-wA-BKu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="142.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="142" id="DrH-8b-yMk"/>
+                                                        <constraint firstAttribute="width" constant="141" id="zdP-cQ-faj"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="  "/>
+                                                    <connections>
+                                                        <segue destination="4bR-aA-IED" kind="show" id="OG6-VJ-6eF"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Y5S-wA-BKu" firstAttribute="leading" secondItem="Or7-il-tai" secondAttribute="leading" id="4J8-6d-YZp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Y5S-wA-BKu" secondAttribute="bottom" id="fh8-9k-t7Z"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y5S-wA-BKu" secondAttribute="trailing" constant="1" id="vJ3-Oi-T6w"/>
+                                                <constraint firstItem="Y5S-wA-BKu" firstAttribute="top" secondItem="Or7-il-tai" secondAttribute="top" id="xQE-6C-rFg"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="image" destination="uVz-0Y-P1q" id="vYk-WR-MxI"/>
@@ -455,6 +473,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2y-rf-I3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2289.8550724637685" y="83.705357142857139"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="oE6-Kl-msi">
+            <objects>
+                <viewController id="4bR-aA-IED" customClass="PostViewController" customModule="BodyDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XM8-hB-enR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZTj-7V-Jy8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="df4-tL-sgS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlM-0M-4Fl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3259" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W3L-hf-oJQ">

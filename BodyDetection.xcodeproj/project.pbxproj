@@ -27,6 +27,7 @@
 		2F60E1E722631E0F00357E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E522631E0F00357E98 /* LaunchScreen.storyboard */; };
 		718E55BC2289F8FF00A9B13B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 718E55BB2289F8FF00A9B13B /* README.md */; };
 		DC61ABB6290446DE0069AE2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC61ABB5290446DE0069AE2F /* GoogleService-Info.plist */; };
+		DC6D72432904A9A000570035 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6D72422904A9A000570035 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		718E55BB2289F8FF00A9B13B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		78F4E054153DD3A4202C28BA /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DC61ABB5290446DE0069AE2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC6D72422904A9A000570035 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				27CF5476290458090003AEA6 /* CommunityViewController.swift */,
+				DC6D72422904A9A000570035 /* PostViewController.swift */,
 				27CF547829045E1B0003AEA6 /* GridCellCollectionViewCell.swift */,
 				2F60E1DC22631E0F00357E98 /* ARViewController.swift */,
 				27B15EE62903B49C00C8CF62 /* WelcomeViewController.swift */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6D72432904A9A000570035 /* PostViewController.swift in Sources */,
 				2F60E1DD22631E0F00357E98 /* ARViewController.swift in Sources */,
 				27B15EE92903B8AA00C8CF62 /* RegisterViewController.swift in Sources */,
 				27CF5477290458090003AEA6 /* CommunityViewController.swift in Sources */,
