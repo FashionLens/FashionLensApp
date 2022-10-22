@@ -113,12 +113,29 @@
                                                                     <action selector="button1Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQM-xF-aDW"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_space_suit" translatesAutoresizingMaskIntoConstraints="NO" id="Xa0-h2-w6y">
+                                                                <rect key="frame" x="17" y="21" width="88" height="88"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="88" id="CeS-Bj-Waj"/>
+                                                                    <constraint firstAttribute="width" constant="88" id="Zyd-hD-Thq"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="44"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="JAu-Hc-kj7" firstAttribute="top" secondItem="UWn-A9-QXL" secondAttribute="top" id="0uK-ds-YfB"/>
                                                             <constraint firstAttribute="bottom" secondItem="JAu-Hc-kj7" secondAttribute="bottom" id="3L5-Oo-M5u"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Xa0-h2-w6y" secondAttribute="trailing" constant="26" id="GkB-dQ-lis"/>
+                                                            <constraint firstItem="Xa0-h2-w6y" firstAttribute="leading" secondItem="UWn-A9-QXL" secondAttribute="leading" constant="17" id="Ho8-Xr-dr6"/>
+                                                            <constraint firstItem="Xa0-h2-w6y" firstAttribute="top" secondItem="UWn-A9-QXL" secondAttribute="top" constant="21" id="g3F-pB-Bxk"/>
                                                             <constraint firstItem="JAu-Hc-kj7" firstAttribute="leading" secondItem="UWn-A9-QXL" secondAttribute="leading" constant="33" id="l6G-ea-Ad8"/>
                                                             <constraint firstAttribute="trailing" secondItem="JAu-Hc-kj7" secondAttribute="trailing" constant="32.5" id="uKG-R2-aR5"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Xa0-h2-w6y" secondAttribute="bottom" constant="19" id="wiV-zQ-G6c"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ak-5A-DCF">
@@ -312,6 +329,7 @@
         <segue reference="TF4-Pw-vbo"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="0_space_suit" width="725" height="725"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="welcome_image" width="994.40533447265625" height="678.13323974609375"/>
         <systemColor name="systemGray6Color">
