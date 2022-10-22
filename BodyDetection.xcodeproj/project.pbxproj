@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C8C7868228387D2006A6EE1 /* character in Resources */ = {isa = PBXBuildFile; fileRef = 0C8C7867228387D2006A6EE1 /* character */; };
-		2751A48B2903A4FD0062778E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751A48A2903A4FD0062778E /* Auth.storyboard */; };
 		2751A48D2903A5CF0062778E /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751A48C2903A5CF0062778E /* FloatingTextField.swift */; };
-		276CC5DF29044C3800FFF6AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 276CC5DE29044C3800FFF6AA /* GoogleService-Info.plist */; };
 		279F59D429038ED700D86E8C /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59D329038ED700D86E8C /* SlideOverCard */; };
 		279F59D9290391A700D86E8C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59D8290391A700D86E8C /* FirebaseAnalytics */; };
 		279F59DB290391A700D86E8C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59DA290391A700D86E8C /* FirebaseAuth */; };
@@ -20,6 +18,8 @@
 		279F59E3290391A700D86E8C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 279F59E2290391A700D86E8C /* FirebaseStorage */; };
 		27B15EE72903B49C00C8CF62 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B15EE62903B49C00C8CF62 /* WelcomeViewController.swift */; };
 		27B15EE92903B8AA00C8CF62 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B15EE82903B8AA00C8CF62 /* RegisterViewController.swift */; };
+		27CF5477290458090003AEA6 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF5476290458090003AEA6 /* CommunityViewController.swift */; };
+		27CF547929045E1B0003AEA6 /* GridCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF547829045E1B0003AEA6 /* GridCellCollectionViewCell.swift */; };
 		2F60E1DB22631E0F00357E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60E1DA22631E0F00357E98 /* AppDelegate.swift */; };
 		2F60E1DD22631E0F00357E98 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60E1DC22631E0F00357E98 /* ARViewController.swift */; };
 		2F60E1E222631E0F00357E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F60E1E022631E0F00357E98 /* Main.storyboard */; };
@@ -31,10 +31,11 @@
 
 /* Begin PBXFileReference section */
 		0C8C7867228387D2006A6EE1 /* character */ = {isa = PBXFileReference; lastKnownFileType = folder; path = character; sourceTree = "<group>"; };
-		2751A48A2903A4FD0062778E /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		2751A48C2903A5CF0062778E /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		27B15EE62903B49C00C8CF62 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		27B15EE82903B8AA00C8CF62 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		27CF5476290458090003AEA6 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		27CF547829045E1B0003AEA6 /* GridCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		2F60E1D822631E0E00357E98 /* BodyDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BodyDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F60E1DA22631E0F00357E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F60E1DC22631E0F00357E98 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +70,8 @@
 		2751A4942903B3C10062778E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				27CF5476290458090003AEA6 /* CommunityViewController.swift */,
+				27CF547829045E1B0003AEA6 /* GridCellCollectionViewCell.swift */,
 				2F60E1DC22631E0F00357E98 /* ARViewController.swift */,
 				27B15EE62903B49C00C8CF62 /* WelcomeViewController.swift */,
 				27B15EE82903B8AA00C8CF62 /* RegisterViewController.swift */,
@@ -109,7 +112,6 @@
 				DC61ABB5290446DE0069AE2F /* GoogleService-Info.plist */,
 				2751A4942903B3C10062778E /* Controllers */,
 				2F60E1DA22631E0F00357E98 /* AppDelegate.swift */,
-				2751A48A2903A4FD0062778E /* Auth.storyboard */,
 				2751A48C2903A5CF0062778E /* FloatingTextField.swift */,
 				0C8C7867228387D2006A6EE1 /* character */,
 				2F60E1E022631E0F00357E98 /* Main.storyboard */,
@@ -205,7 +207,6 @@
 				718E55BC2289F8FF00A9B13B /* README.md in Resources */,
 				2F60E1E422631E0F00357E98 /* Assets.xcassets in Resources */,
 				2F60E1E222631E0F00357E98 /* Main.storyboard in Resources */,
-				2751A48B2903A4FD0062778E /* Auth.storyboard in Resources */,
 				DC61ABB6290446DE0069AE2F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +220,10 @@
 			files = (
 				2F60E1DD22631E0F00357E98 /* ARViewController.swift in Sources */,
 				27B15EE92903B8AA00C8CF62 /* RegisterViewController.swift in Sources */,
+				27CF5477290458090003AEA6 /* CommunityViewController.swift in Sources */,
 				27B15EE72903B49C00C8CF62 /* WelcomeViewController.swift in Sources */,
 				2F60E1DB22631E0F00357E98 /* AppDelegate.swift in Sources */,
+				27CF547929045E1B0003AEA6 /* GridCellCollectionViewCell.swift in Sources */,
 				2751A48D2903A5CF0062778E /* FloatingTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,6 +63,15 @@
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7B-tC-ib5">
+                                <rect key="frame" x="161" y="48" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Lif-hu-84E"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gnh-Ls-9aP"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -86,6 +96,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4js-pV-iU6">
+                                <rect key="frame" x="342" y="789" width="52" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.crop.rectangle.stack.fill" catalog="system" title=""/>
+                                <connections>
+                                    <segue destination="5Gr-J5-2sL" kind="show" id="7e0-wi-zmh"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-X6-fro">
                                 <rect key="frame" x="0.0" y="636" width="414" height="128"/>
                                 <subviews>
@@ -306,6 +325,135 @@
             </objects>
             <point key="canvasLocation" x="1430.4347826086957" y="84.375"/>
         </scene>
+        <!--Community View Controller-->
+        <scene sceneID="Wp2-1E-Tzj">
+            <objects>
+                <viewController id="5Gr-J5-2sL" customClass="CommunityViewController" customModule="BodyDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Pb-sN-wSR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-8d-EEq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="729"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="SSF-1P-1Tq"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="70E-M0-uzQ">
+                                    <size key="itemSize" width="142.30000000000001" height="142.30000000000001"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="Lmu-N9-Zv3" customClass="GridCellCollectionViewCell" customModule="BodyDetection" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="142.30000000000001" height="142.30000000000001"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Or7-il-tai">
+                                            <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVz-0Y-P1q">
+                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="140"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="image" destination="uVz-0Y-P1q" id="vYk-WR-MxI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5Gr-J5-2sL" id="0OR-ap-co0"/>
+                                    <outlet property="delegate" destination="5Gr-J5-2sL" id="EHl-cb-3d5"/>
+                                </connections>
+                            </collectionView>
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="x3n-df-Zit">
+                                <rect key="frame" x="0.0" y="783" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5Gr-J5-2sL" id="HkK-0E-qoX"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z99-Qu-9Tc">
+                                <rect key="frame" x="24" y="739" width="88" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="👕Shirts">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvp-Ar-Ue8">
+                                <rect key="frame" x="125" y="739" width="67" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pants">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-Dy-oHk">
+                                <rect key="frame" x="181" y="739" width="145" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="👗Cute Dresses">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dty-RV-oMa">
+                                <rect key="frame" x="310" y="739" width="76" height="34"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Suits">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eEc-5r-llM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eEc-5r-llM" firstAttribute="trailing" secondItem="Dty-RV-oMa" secondAttribute="trailing" constant="30" id="1dF-zk-Anr"/>
+                            <constraint firstItem="fvp-Ar-Ue8" firstAttribute="leading" secondItem="z99-Qu-9Tc" secondAttribute="trailing" constant="20" id="2Jg-AT-xAr"/>
+                            <constraint firstItem="kgQ-8d-EEq" firstAttribute="top" secondItem="7Pb-sN-wSR" secondAttribute="top" id="Emy-OV-XCZ"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="Fp4-LQ-63E"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="N4b-iN-0Rz"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="fvp-Ar-Ue8" secondAttribute="bottom" constant="10" id="QlU-xD-2LM"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="z99-Qu-9Tc" secondAttribute="bottom" constant="10" id="UJT-tW-DCB"/>
+                            <constraint firstItem="kgQ-8d-EEq" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" id="XjK-gd-4rW"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="55" id="ejL-2n-KNm"/>
+                            <constraint firstItem="wPN-Dy-oHk" firstAttribute="leading" secondItem="fvp-Ar-Ue8" secondAttribute="trailing" constant="20" id="gSy-ZM-MQh"/>
+                            <constraint firstItem="Dty-RV-oMa" firstAttribute="leading" secondItem="wPN-Dy-oHk" secondAttribute="trailing" constant="20" id="nf2-4F-Qzf"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="wPN-Dy-oHk" secondAttribute="bottom" constant="10" id="oMA-hZ-JRj"/>
+                            <constraint firstItem="kgQ-8d-EEq" firstAttribute="trailing" secondItem="eEc-5r-llM" secondAttribute="trailing" id="wbE-51-kRm"/>
+                            <constraint firstItem="eEc-5r-llM" firstAttribute="bottom" secondItem="kgQ-8d-EEq" secondAttribute="bottom" constant="110" id="wpB-7u-zDA"/>
+                            <constraint firstItem="x3n-df-Zit" firstAttribute="top" secondItem="Dty-RV-oMa" secondAttribute="bottom" constant="10" id="zcB-K9-yiX"/>
+                            <constraint firstItem="z99-Qu-9Tc" firstAttribute="leading" secondItem="eEc-5r-llM" secondAttribute="leading" constant="30" id="zuz-d8-LCu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BwH-71-0it"/>
+                    <connections>
+                        <outlet property="b1" destination="z99-Qu-9Tc" id="arv-E0-EfW"/>
+                        <outlet property="b2" destination="fvp-Ar-Ue8" id="CaY-h5-uxZ"/>
+                        <outlet property="b3" destination="wPN-Dy-oHk" id="7Ek-JX-vLH"/>
+                        <outlet property="b4" destination="Dty-RV-oMa" id="R1E-gd-jk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2y-rf-I3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289.8550724637685" y="83.705357142857139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="W3L-hf-oJQ">
             <objects>
@@ -371,15 +519,23 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Lif-hu-84E"/>
         <segue reference="TF4-Pw-vbo"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="person.crop.rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <image name="0_space_suit" width="725" height="725"/>
         <image name="1_good_hoodie" width="725" height="725"/>
         <image name="2_good_csi_suit" width="725" height="725"/>
         <image name="3_cyber_punk" width="725" height="725"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="welcome_image" width="994.40533447265625" height="678.13323974609375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
