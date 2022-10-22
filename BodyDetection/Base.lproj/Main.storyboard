@@ -153,11 +153,26 @@
                                                                     <action selector="button2Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LU-Ht-xuV"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1_good_hoodie" translatesAutoresizingMaskIntoConstraints="NO" id="5nO-4c-Iu4">
+                                                                <rect key="frame" x="17" y="21" width="88" height="88"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="88" id="bVY-nA-Gyy"/>
+                                                                    <constraint firstAttribute="width" constant="88" id="jfo-Sx-KSc"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="44"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="NeH-Mw-NTC" firstAttribute="top" secondItem="9ak-5A-DCF" secondAttribute="top" id="4Oy-yE-YBC"/>
                                                             <constraint firstAttribute="trailing" secondItem="NeH-Mw-NTC" secondAttribute="trailing" constant="32.5" id="5WZ-7n-MtM"/>
+                                                            <constraint firstItem="5nO-4c-Iu4" firstAttribute="leading" secondItem="9ak-5A-DCF" secondAttribute="leading" constant="17" id="6hu-aY-S32"/>
                                                             <constraint firstAttribute="bottom" secondItem="NeH-Mw-NTC" secondAttribute="bottom" id="O2E-9c-uhq"/>
+                                                            <constraint firstItem="5nO-4c-Iu4" firstAttribute="top" secondItem="9ak-5A-DCF" secondAttribute="top" constant="21" id="cTP-22-NS0"/>
                                                             <constraint firstItem="NeH-Mw-NTC" firstAttribute="leading" secondItem="9ak-5A-DCF" secondAttribute="leading" constant="33" id="fyb-SJ-RHQ"/>
                                                         </constraints>
                                                     </view>
@@ -176,10 +191,25 @@
                                                                     <action selector="button3Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvQ-1l-jKb"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2_good_csi_suit" translatesAutoresizingMaskIntoConstraints="NO" id="nv2-ad-c9g">
+                                                                <rect key="frame" x="17" y="21" width="88" height="88"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="88" id="Mdk-VD-u4V"/>
+                                                                    <constraint firstAttribute="width" constant="88" id="Utf-Yj-bpd"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="44"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="CWI-gp-9OX" firstAttribute="leading" secondItem="piH-mn-ux2" secondAttribute="leading" constant="33" id="FGO-gW-mwJ"/>
                                                             <constraint firstAttribute="bottom" secondItem="CWI-gp-9OX" secondAttribute="bottom" id="RtH-Zh-9x6"/>
+                                                            <constraint firstItem="nv2-ad-c9g" firstAttribute="top" secondItem="piH-mn-ux2" secondAttribute="top" constant="21" id="V1p-SA-nmC"/>
+                                                            <constraint firstItem="nv2-ad-c9g" firstAttribute="leading" secondItem="piH-mn-ux2" secondAttribute="leading" constant="17" id="gJv-O7-qeg"/>
                                                             <constraint firstItem="CWI-gp-9OX" firstAttribute="top" secondItem="piH-mn-ux2" secondAttribute="top" id="hxt-FN-Abv"/>
                                                             <constraint firstAttribute="trailing" secondItem="CWI-gp-9OX" secondAttribute="trailing" constant="32.5" id="tKf-KA-qoQ"/>
                                                         </constraints>
@@ -199,12 +229,27 @@
                                                                     <action selector="button4Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVq-U9-cPJ"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3_cyber_punk" translatesAutoresizingMaskIntoConstraints="NO" id="GTg-Zq-Tjf">
+                                                                <rect key="frame" x="17" y="21" width="88" height="88"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="88" id="5b3-ql-554"/>
+                                                                    <constraint firstAttribute="height" constant="88" id="rqG-mb-bNS"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="44"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="gfX-ZN-68a" secondAttribute="trailing" constant="32.5" id="3g4-AY-62H"/>
                                                             <constraint firstAttribute="bottom" secondItem="gfX-ZN-68a" secondAttribute="bottom" id="JAC-KU-2ar"/>
                                                             <constraint firstItem="gfX-ZN-68a" firstAttribute="top" secondItem="4Ft-Qk-bbZ" secondAttribute="top" id="Qkb-rU-Hnv"/>
+                                                            <constraint firstItem="GTg-Zq-Tjf" firstAttribute="leading" secondItem="4Ft-Qk-bbZ" secondAttribute="leading" constant="17" id="fkV-HF-oQY"/>
                                                             <constraint firstItem="gfX-ZN-68a" firstAttribute="leading" secondItem="4Ft-Qk-bbZ" secondAttribute="leading" constant="33" id="k1b-Ae-fR0"/>
+                                                            <constraint firstItem="GTg-Zq-Tjf" firstAttribute="top" secondItem="4Ft-Qk-bbZ" secondAttribute="top" constant="21" id="x7D-Hb-Q4s"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-0u-MUN">
@@ -330,6 +375,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="0_space_suit" width="725" height="725"/>
+        <image name="1_good_hoodie" width="725" height="725"/>
+        <image name="2_good_csi_suit" width="725" height="725"/>
+        <image name="3_cyber_punk" width="725" height="725"/>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="welcome_image" width="994.40533447265625" height="678.13323974609375"/>
         <systemColor name="systemGray6Color">

@@ -167,7 +167,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
     func selectButton(i: Int32) {
         resetButtonSizes()
         
-        let largeBtnConfig = UIImage.SymbolConfiguration(pointSize: 100, weight: .semibold, scale: .large)
+        let largeBtnConfig = UIImage.SymbolConfiguration(pointSize: 100, weight: .medium, scale: .large)
         let largeBtnImage = UIImage(systemName: "circle", withConfiguration: largeBtnConfig)
         
         // hide all non-selected models
