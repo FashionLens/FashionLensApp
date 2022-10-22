@@ -11,6 +11,17 @@ import RealityKit
 import ARKit
 import Combine
 
+class Lighting: Entity, HasDirectionalLight, HasAnchoring {
+
+    required init() {
+        super.init()
+        self.light = DirectionalLightComponent(color: .white,
+                                           intensity: 2000,
+                                    isRealWorldProxy: true)
+    }
+}
+
+
 class ARViewController: UIViewController, ARSessionDelegate {
 
     @IBOutlet var arView: ARView!
@@ -36,10 +47,19 @@ class ARViewController: UIViewController, ARSessionDelegate {
         arView.session.run(configuration)
         
         arView.scene.addAnchor(characterAnchor)
-        
+    
+        // add lights
+        let light = Lighting()
+        light.orientation = simd_quatf(angle: .pi/8,
+                                        axis: [0, 1, 0])
+
+        let directLightAnchor = AnchorEntity()
+        directLightAnchor.addChild(light)
+        characterAnchor.addChild(directLightAnchor)
+                
         // Asynchronously load the 3D character.
         var cancellable: AnyCancellable? = nil
-        cancellable = Entity.loadBodyTrackedAsync(named: "character/cyberpunk").sink(
+        cancellable = Entity.loadBodyTrackedAsync(named: "character/good_space_suit").sink(
             receiveCompletion: { completion in
                 if case let .failure(error) = completion {
                     print("Error: Unable to load model: \(error.localizedDescription)")
@@ -58,7 +78,7 @@ class ARViewController: UIViewController, ARSessionDelegate {
             }
         })
     }
-    
+
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         for anchor in anchors {
             guard let bodyAnchor = anchor as? ARBodyAnchor else { continue }
