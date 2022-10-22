@@ -1,9 +1,10 @@
-/*
-See LICENSE folder for this sample’s licensing information.
-
-Abstract:
-The sample app's main view controller.
-*/
+//
+//  ARViewController.swift
+//  BodyDetection
+//
+//  Created by Team Fashion Lens on 10/22/22.
+//  Copyright © 2022 Apple. All rights reserved.
+//
 
 import UIKit
 import RealityKit

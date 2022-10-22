@@ -6,75 +6,129 @@
 //  Copyright © 2022 Apple. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class FloatingTextField: UITextField {
-
-    var floatingLabel: UILabel = UILabel(frame: CGRect.zero) // Label
-    var floatingLabelHeight: CGFloat = 14 // Default height
+enum placeholderDirection: String {
+    case placeholderUp = "up"
+    case placeholderDown = "down"
     
-    @IBInspectable
-    var _placeholder: String? // we cannot override 'placeholder'
-    
-    @IBInspectable
-    var floatingLabelColor: UIColor = UIColor.black {
-        didSet {
-            self.floatingLabel.textColor = floatingLabelColor
-            self.setNeedsDisplay()
-        }
+}
+public class FloatingTextField: UITextField {
+    var enableMaterialPlaceHolder : Bool = true
+    var placeholderAttributes = NSDictionary()
+    var lblPlaceHolder = UILabel()
+    var defaultFont = UIFont()
+    var difference: CGFloat = 30.0
+    var directionMaterial = placeholderDirection.placeholderUp
+    var isUnderLineAvailabe : Bool = true
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        Initialize ()
     }
-    
-    @IBInspectable
-    var activeBorderColor: UIColor = UIColor.blue
-    
-    @IBInspectable
-    var floatingLabelFont: UIFont = UIFont.systemFont(ofSize: 14) {
-        didSet {
-            self.floatingLabel.font = self.floatingLabelFont
-            self.font = self.floatingLabelFont
-            self.setNeedsDisplay()
-        }
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self._placeholder = (self._placeholder != nil) ? self._placeholder : placeholder // Use our custom placeholder if none is set
-        placeholder = self._placeholder // make sure the placeholder is shown
-        self.floatingLabel = UILabel(frame: CGRect.zero)
-        self.addTarget(self, action: #selector(self.addFloatingLabel), for: .editingDidBegin)
-        self.addTarget(self, action: #selector(self.removeFloatingLabel), for: .editingDidEnd)
+        Initialize ()
     }
-
-    // Add a floating label to the view on becoming first responder
-    @objc func addFloatingLabel() {
-        if self.text == "" {
-            self.floatingLabel.textColor = floatingLabelColor
-            self.floatingLabel.font = floatingLabelFont
-            self.floatingLabel.text = self._placeholder
-            self.floatingLabel.layer.backgroundColor = UIColor.white.cgColor
-            self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
-            self.floatingLabel.clipsToBounds = true
-            self.floatingLabel.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.floatingLabelHeight)
-    self.layer.borderColor = self.activeBorderColor.cgColor
-            self.addSubview(self.floatingLabel)
-          
-            self.floatingLabel.bottomAnchor.constraint(equalTo:
-            self.topAnchor, constant: -10).isActive = true // Place our label 10pts above the text field
-            // Remove the placeholder
-            self.placeholder = ""
+    func Initialize(){
+        self.clipsToBounds = false
+        self.addTarget(self, action: #selector(FloatingTextField.textFieldDidChange), for: .editingChanged)
+        self.EnableMaterialPlaceHolder(enableMaterialPlaceHolder: true)
+        if isUnderLineAvailabe {
+            let underLine = UIImageView()
+            underLine.backgroundColor = UIColor.init(red: 197/255.0, green: 197/255.0, blue: 197/255.0, alpha: 0.8)
+            //            underLine.frame = CGRectMake(0, self.frame.size.height-1, self.frame.size.width, 1)
+            underLine.frame = CGRect(x: 0, y: self.frame.size.height-1, width : self.frame.size.width, height : 1)
+            
+            underLine.clipsToBounds = true
+            self.addSubview(underLine)
         }
-        self.setNeedsDisplay()
+        defaultFont = self.font!
+        
     }
-
-    @objc func removeFloatingLabel() {
-        if self.text == "" {
-            UIView.animate(withDuration: 0.13) {
-               self.subviews.forEach{ $0.removeFromSuperview() }
-               self.setNeedsDisplay()
+    @IBInspectable var placeHolderColor: UIColor? = UIColor.lightGray {
+        didSet {
+            self.attributedPlaceholder = NSAttributedString(string: self.placeholder! as String ,
+                                                            attributes:[NSAttributedString.Key.foregroundColor: placeHolderColor!])
+        }
+    }
+    override public var placeholder:String?  {
+        didSet {
+            //  NSLog("placeholder = \(placeholder)")
+        }
+        willSet {
+            let atts  = [NSAttributedString.Key.foregroundColor.rawValue: UIColor.lightGray, NSAttributedString.Key.font: UIFont.labelFontSize] as! [NSAttributedString.Key : Any]
+            self.attributedPlaceholder = NSAttributedString(string: newValue!, attributes:atts)
+            self.EnableMaterialPlaceHolder(enableMaterialPlaceHolder: self.enableMaterialPlaceHolder)
+        }
+        
+    }
+    override public var attributedText:NSAttributedString?  {
+        didSet {
+            //  NSLog("text = \(text)")
+        }
+        willSet {
+            if (self.placeholder != nil) && (self.text != "")
+            {
+                let string = NSString(string : self.placeholder!)
+                self.placeholderText(string)
             }
-            self.placeholder = self._placeholder
+            
         }
-        self.layer.borderColor = UIColor.black.cgColor
     }
-
+    @objc func textFieldDidChange(){
+        if self.enableMaterialPlaceHolder {
+            if (self.text == nil) || (self.text?.count)! > 0 {
+                self.lblPlaceHolder.alpha = 1
+                self.attributedPlaceholder = nil
+                self.lblPlaceHolder.textColor = self.placeHolderColor
+                self.lblPlaceHolder.frame.origin.x = 0 ////\\
+                let fontSize = self.font!.pointSize;
+                self.lblPlaceHolder.font = UIFont.init(name: (self.font?.fontName)!, size: fontSize-3)
+            }
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {() -> Void in
+                if (self.text == nil) || (self.text?.count)! <= 0 {
+                    self.lblPlaceHolder.font = self.defaultFont
+                    self.lblPlaceHolder.frame = CGRect(x: self.lblPlaceHolder.frame.origin.x+10, y : 0, width :self.frame.size.width, height : self.frame.size.height)
+                }
+                else {
+                    if self.directionMaterial == placeholderDirection.placeholderUp {
+                        self.lblPlaceHolder.frame = CGRect(x : self.lblPlaceHolder.frame.origin.x, y : -self.difference, width : self.frame.size.width, height : self.frame.size.height)
+                    }else{
+                        self.lblPlaceHolder.frame = CGRect(x : self.lblPlaceHolder.frame.origin.x, y : self.difference, width : self.frame.size.width, height : self.frame.size.height)
+                    }
+                    
+                }
+            }, completion: {(finished: Bool) -> Void in
+            })
+        }
+    }
+    func EnableMaterialPlaceHolder(enableMaterialPlaceHolder: Bool){
+        self.enableMaterialPlaceHolder = enableMaterialPlaceHolder
+        self.lblPlaceHolder = UILabel()
+        self.lblPlaceHolder.frame = CGRect(x: 0, y : 0, width : 0, height :self.frame.size.height)
+        self.lblPlaceHolder.font = UIFont.systemFont(ofSize: 10)
+        self.lblPlaceHolder.alpha = 0
+        self.lblPlaceHolder.clipsToBounds = true
+        self.addSubview(self.lblPlaceHolder)
+        self.lblPlaceHolder.attributedText = self.attributedPlaceholder
+        //self.lblPlaceHolder.sizeToFit()
+    }
+    func placeholderText(_ placeholder: NSString){
+        let atts  = [NSAttributedString.Key.foregroundColor: UIColor.lightGray, NSAttributedString.Key.font: UIFont.labelFontSize] as [NSAttributedString.Key : Any]
+        self.attributedPlaceholder = NSAttributedString(string: placeholder as String , attributes:atts)
+        self.EnableMaterialPlaceHolder(enableMaterialPlaceHolder: self.enableMaterialPlaceHolder)
+    }
+    override public func becomeFirstResponder()->(Bool){
+        let returnValue = super.becomeFirstResponder()
+        return returnValue
+    }
+    override public func resignFirstResponder()->(Bool){
+        let returnValue = super.resignFirstResponder()
+        return returnValue
+    }
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+    }
 }
