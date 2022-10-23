@@ -513,7 +513,7 @@
                                 <rect key="frame" x="20" y="715" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="69 likes">
+                                    <fragment content="21 likes">
                                         <attributes>
                                             <font key="NSFont" size="17" name="HelveticaNeue-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
